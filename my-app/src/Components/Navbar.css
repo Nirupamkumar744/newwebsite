@@ -4,11 +4,11 @@
   color: black;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Make the navbar fixed */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -31,53 +31,131 @@
 
 .nav-links {
   text-decoration: none;
-  color: rgb(5, 4, 0);
+  color: rgb(5, 4, 0); /* Original black */
   font-weight: bold;
-  transition: color 0.3s;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links:hover {
-  color: rgb(248, 227, 2);
+  color: rgb(248, 227, 2); /* Original yellow */
+  transform: scale(1.05); /* Slight pop */
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
 }
 
 .line {
-  width: 25px;
-  height: 3px;
-  background-color: black; /* Hamburger lines color */
-  margin: 4px 0;
-  transition: 0.3s;
+  width: 30px; /* Larger for boldness */
+  height: 4px; /* Thicker */
+  background-color: black; /* Original black */
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.4s ease; /* Smooth transition */
+}
+
+/* Hamburger Animation */
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+  background-color: rgb(248, 227, 2); /* Yellow when active */
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+  background-color: rgb(248, 227, 2); /* Yellow when active */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem; /* Slightly compact */
+  }
+
   .nav-menu {
-      flex-direction: column;
-      position: absolute;
-      top: 99px;
-      left: 10px;
-      right: 10px;
-      background-color: rgb(252, 254, 255); /* Background color for mobile view */
-      display: none; /* Hide by default */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    flex-direction: column;
+    position: fixed; /* Full-screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Strong shadow */
+    border-bottom: 3px solid rgb(248, 227, 2); /* Yellow border */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Start hidden */
   }
 
   .nav-menu.active {
-      display: flex; /* Show when active */
+    display: flex;
+    opacity: 1;
+    animation: slideDown 0.4s ease forwards; /* Slide-down effect */
+  }
+
+  .nav-item {
+    margin: 1.5rem 0; /* Vertical spacing */
   }
 
   .nav-links {
-      padding: 1rem; /* Add padding for better touch targets */
-      border-radius: 5px; /* Optional: rounded corners */
+    color: rgb(5, 4, 0); /* Original black */
+    font-size: 1.6rem; /* Larger for impact */
+    padding: 1rem 3rem; /* Wide touch area */
+    border-radius: 10px;
+    background: rgba(248, 227, 2, 0.1); /* Subtle yellow overlay */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .nav-links:hover {
+    color: rgb(248, 227, 2); /* Yellow */
+    background: rgba(248, 227, 2, 0.3); /* Stronger yellow */
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(248, 227, 2, 0.5); /* Yellow glow */
   }
 
   .hamburger {
-      display: flex; /* Show hamburger in mobile view */
+    display: flex; /* Show on mobile */
+  }
+}
+
+/* Slide-down Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Extra Small Screens (below 480px) */
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 1.3rem; /* Slightly smaller */
+    padding: 0.8rem 2rem;
+  }
+
+  .hamburger {
+    padding: 3px;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
   }
 }

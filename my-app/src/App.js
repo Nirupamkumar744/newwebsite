@@ -14,6 +14,7 @@ import BlogCards from './Components/BlogCards';
 import ContactUs from './Components/ContactUs';
 import Blog from './Components/blog1';
 import Blog2 from './Components/blog2';
+import Footer from './Components/Footer';
 
 
 
@@ -35,6 +36,7 @@ function App() {
               <OurServices/>
               <Founder />
               <StudentReview />
+              
             </>
           } />
           <Route path="/about" element={<About/>} /> 
@@ -48,6 +50,7 @@ function App() {
 
         {/* Contact Us button visible on every page */}
         <ContactUsButton />
+        <Footer />
       </div>
     </Router>
   );
