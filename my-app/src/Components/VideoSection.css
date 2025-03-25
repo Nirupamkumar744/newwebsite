@@ -48,6 +48,7 @@
     .video-section {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center; /* Center items horizontally */
+        padding: 1rem; /* Reduce padding on mobile */
     }
 
     .text-container {
@@ -58,9 +59,14 @@
     }
 
     .video-container {
-        height: 500px; /* Increased height for smaller screens */
+        height: 400px; /* Increased height for video on mobile */
         max-width: 100%; /* Ensure video container takes full width */
         width: 100%; /* Ensure video container takes full width */
+        margin: 0; /* Remove margins around video */
+    }
+
+    .video {
+        object-fit: cover; /* Ensure video fills container */
     }
 
     .section-heading {
@@ -70,20 +76,12 @@
     .section-text {
         font-size: 0.9rem; /* Adjust text size for smaller screens */
     }
-}
 
-/* Additional Styles for Cards */
-.card {
-    width: 100%; /* Ensure cards take full width */
-    max-width: 700px; /* Set a maximum width for cards on larger screens */
-    margin: 0 auto; /* Center cards */
-}
-
-/* Responsive Styles for Cards */
-@media (max-width: 768px) {
+    /* Card adjustments for mobile */
     .card {
-        width: 600px; /* Set a fixed width for cards on mobile */
-        max-width: 600px; /* Ensure cards do not exceed this width */
-        height: auto; /* Allow height to adjust based on content */
+        width: 100%; /* Ensure cards take full width */
+        max-width: 100%; /* Make cards full-width on mobile */
+        margin: 0; /* Remove margin around cards */
+        padding: 1rem; /* Add some padding around cards */
     }
 }
