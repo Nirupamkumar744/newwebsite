@@ -106,12 +106,14 @@ body, html {
 @media (max-width: 480px) {
     .blog-container {
         grid-template-columns: 1fr; /* Stack cards on smaller screens */
-        padding: 0 15px; /* Equal padding on both sides */
+        padding: 0 10px; /* Reduced padding to allow more card width */
         margin-bottom: 80px; /* Increased space above footer */
     }
 
     .card {
-        margin: 0; /* Ensure no extra margin on cards */
+        margin: 0 auto; /* Center the card */
+        width: 90%; /* Increase card width relative to the container */
+        max-width: 400px; /* Optional: Set a max-width to prevent it from getting too wide */
     }
 
     .card h3 {
