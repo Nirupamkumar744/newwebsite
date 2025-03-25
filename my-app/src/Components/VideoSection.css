@@ -58,7 +58,8 @@
     }
 
     .video-container {
-        height: 200px; /* Reduce height for smaller screens */
+        height: 500px; /* Increased height for smaller screens */
+        max-width: 100%; /* Ensure video container takes full width */
         width: 100%; /* Ensure video container takes full width */
     }
 
@@ -68,5 +69,21 @@
 
     .section-text {
         font-size: 0.9rem; /* Adjust text size for smaller screens */
+    }
+}
+
+/* Additional Styles for Cards */
+.card {
+    width: 100%; /* Ensure cards take full width */
+    max-width: 100%; /* Ensure cards do not exceed container width */
+    margin: 0 auto; /* Center cards */
+}
+
+/* Responsive Styles for Cards */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Ensure cards take full width on mobile */
+        max-width: 100%; /* Ensure cards do not exceed container width */
+        height: auto; /* Allow height to adjust based on content */
     }
 }
