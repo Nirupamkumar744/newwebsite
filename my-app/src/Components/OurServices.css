@@ -27,6 +27,7 @@
     border-radius: 8px; /* Optional: rounded corners */
     text-align: left; /* Align text to the left */
     max-width: 250px; /* Set a maximum width for each card on large screens */
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .service-image {
@@ -55,7 +56,8 @@
     }
 
     .service-card {
-        max-width: 90%; /* Increase width on small screens (adjustable) */
-        margin: 0.5rem 0; /* Space between stacked cards */
+        max-width: 95%; /* Increase width to almost full screen */
+        margin: 1rem 0; /* Increase vertical spacing for better separation */
+        padding: 1.5rem; /* Slightly more padding for a bigger feel */
     }
 }
