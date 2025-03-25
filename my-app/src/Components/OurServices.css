@@ -26,7 +26,7 @@
     border: 1px solid #000000; /* Optional: border around cards */
     border-radius: 8px; /* Optional: rounded corners */
     text-align: left; /* Align text to the left */
-    max-width: 250px; /* Set a maximum width for each card */
+    max-width: 250px; /* Set a maximum width for each card on large screens */
 }
 
 .service-image {
@@ -55,7 +55,7 @@
     }
 
     .service-card {
-        max-width: 90%; /* Increase width to 90% for mobile */
+        max-width: 90%; /* Increase width on small screens (adjustable) */
         margin: 0.5rem 0; /* Space between stacked cards */
     }
 }
