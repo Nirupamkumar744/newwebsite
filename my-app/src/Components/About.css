@@ -134,12 +134,12 @@
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
-        padding: 2rem 0; /* Add space above and below card section */
+        padding: 20px 0; /* Add space above and below card section */
     }
 
     .card {
         max-width: 90%;
-        margin: 1.5rem 0; /* Increase vertical margin for more space */
+        margin: 2.5rem 0; /* Increased vertical margin for more space */
         height: 350px;
         min-height: 350px;
     }
