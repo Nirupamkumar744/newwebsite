@@ -56,8 +56,9 @@
     }
 
     .service-card {
-        max-width: 95%; /* Increase width to almost full screen */
-        margin: 1rem 0; /* Increase vertical spacing for better separation */
-        padding: 1.5rem; /* Slightly more padding for a bigger feel */
+        width: 100%; /* Full width on small screens */
+        max-width: none; /* Remove max-width constraint */
+        margin: 1rem 0; /* Vertical spacing only */
+        padding: 1.5rem; /* Increase padding for a bigger feel */
     }
 }
