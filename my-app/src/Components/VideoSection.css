@@ -1,0 +1,72 @@
+/* src/VideoSection.css */
+.video-section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between text and video */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 90px auto 0; /* Add margin-top for space above the section */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.text-container {
+    flex: 1; /* Take up available space */
+    padding-right: 2rem; /* Space between text and video */
+    min-width: 300px; /* Minimum width for text container */
+}
+
+.section-heading {
+    font-size: 3rem; /* Adjust heading size */
+    margin-bottom: 1rem; /* Space below heading */
+    font-family: 'Cabin Sketch', cursive;
+    color: #ff0101;
+}
+
+.section-text {
+    font-size: 20px; /* Adjust text size */
+    color: #080808; /* Text color */
+}
+
+.video-container {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: center; /* Center video horizontally */
+    height: 300px; /* Set a fixed height for the video container */
+    max-width: 700px; /* Set a maximum width for the video container */
+    width: 100%; /* Make the video container responsive */
+    border-radius: 10px;
+}
+
+.video {
+    width: 100%; /* Make video responsive */
+    height: 100%; /* Make video fill the container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .text-container {
+        padding-right: 0; /* Remove right padding */
+        padding-bottom: 1rem; /* Add bottom padding for spacing */
+        min-width: auto; /* Remove minimum width */
+        text-align: center; /* Center text for better appearance */
+    }
+
+    .video-container {
+        height: 200px; /* Reduce height for smaller screens */
+        width: 100%; /* Ensure video container takes full width */
+    }
+
+    .section-heading {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .section-text {
+        font-size: 0.9rem; /* Adjust text size for smaller screens */
+    }
+}

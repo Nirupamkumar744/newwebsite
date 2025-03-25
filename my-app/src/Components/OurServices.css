@@ -1,0 +1,61 @@
+/* src/OurServices.css */
+.services-section {
+    padding: 2rem; /* Add padding around the section */
+    max-width: 1400px; /* Set a maximum width for the section */
+    margin: 0 auto; /* Center the section */
+    text-align: center; /* Center the heading */
+}
+
+.services-heading {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 2rem; /* Space below heading */
+    font-family: 'Cabin Sketch', cursive;
+    color: #0c7502;
+}
+
+.services-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.service-card {
+    flex: 1; /* Allow cards to take up equal space */
+    margin: 1rem; /* Space around each card */
+    padding: 1rem; /* Padding inside each card */
+    border: 1px solid #000000; /* Optional: border around cards */
+    border-radius: 8px; /* Optional: rounded corners */
+    text-align: left; /* Align text to the left */
+    max-width: 250px; /* Set a maximum width for each card */
+}
+
+.service-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.service-title {
+    font-size: 1.2rem; /* Adjust title size */
+    margin: 1rem 0; /* Space above and below title */
+    font-family: 'Cabin Sketch', cursive;
+    color: #0c7502;
+}
+
+.service-description {
+    font-size: 1rem; /* Adjust description size */
+    color: #000000; /* Text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .service-card {
+        max-width: 100%; /* Allow cards to take full width */
+        margin: 0.5rem 0; /* Space between stacked cards */
+    }
+}

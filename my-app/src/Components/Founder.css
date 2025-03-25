@@ -1,0 +1,63 @@
+/* src/Founder.css */
+.founder-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 2rem; /* Add padding around the section */
+    max-width: 1500px; /* Set a maximum width for the section */
+    margin: 0 auto; /* Center the section */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.founder-image {
+    flex: 1; /* Allow the image to take up available space */
+    padding-right: 2rem; /* Space between image and text */
+}
+
+.founder-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.founder-content {
+    flex: 2; /* Allow the content to take up more space */
+}
+
+.founder-heading {
+    font-size: 3rem; /* Adjust heading size */
+    margin-bottom: 1rem; /* Space below heading */
+    font-family: 'Cabin Sketch', cursive;
+    color: #0c7502;
+}
+
+.founder-message {
+    font-size: 1.2rem; /* Adjust text size */
+    color: #050505; /* Text color */
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.colon-icon {
+    font-weight: bold; /* Make the colon icon bold */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .founder-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .founder-image {
+        padding-right: 0; /* Remove right padding */
+        padding-bottom: 1rem; /* Add bottom padding for spacing */
+        flex: none; /* Allow the image to take its natural size */
+    }
+
+    .founder-heading {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .founder-message {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+}

@@ -1,0 +1,67 @@
+.faq-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto; /* Increased top margin for more space */
+  font-family: Arial, sans-serif;
+  border-radius: 10px; /* Rounds the corners of the FAQ container */
+  padding: 20px; /* Adds padding inside the FAQ container */
+  background-image: url("https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742884786/Flux_Dev_Create_a_background_image_suitable_for_a_FAQ_section__2_rtzugc.jpg"); /* Background image */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  position: relative; /* Set position to relative for the overlay */
+}
+
+.faq-container::after {
+  content: ""; /* Required for pseudo-element */
+  position: absolute; /* Position it absolutely within the container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+  z-index: 1; /* Places the overlay above the background image */
+}
+
+.faq-container > * {
+  position: relative; /* Ensures the content is above the overlay */
+  z-index: 2; /* Places the content above the overlay */
+}
+
+.faq-container h2 {
+  text-align: center;
+  color: #012a0e;
+  margin-bottom: 20px; /* Adds spacing below the heading */
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #000000;
+}
+
+.faq-question:hover {
+  color: #007bff;
+}
+
+.faq-answer {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #f50000;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}

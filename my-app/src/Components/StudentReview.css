@@ -1,0 +1,57 @@
+/* src/components/StudentReview.css */
+.student-reviews {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: space-between; /* Space between cards */
+    max-width: 1400px; /* Max width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 1rem; /* Padding around the container */
+}
+
+.review-card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border: 2px solid #07f0f4; /* Border for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding inside cards */
+    margin: 0.5rem; /* Margin between cards */
+    flex: 0 1 calc(25% - 1rem); /* 4 cards per row with space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.2s; /* Smooth hover effect */
+    text-align: center; /* Center text in cards */
+}
+
+.review-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.student-image {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 0.5rem; /* Space below image */
+}
+.para{
+
+    font-family: 'Shadows Into Light', cursive;
+    font-size: larger;
+}
+
+.rating {
+    margin-top: 0.5rem; /* Space above rating */
+}
+
+.star {
+    color: #ccc; /* Default star color */
+    font-size: 1.5rem; /* Size of stars */
+}
+
+.star.filled {
+    color: #ffcc00 ; /* Color for filled stars */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 1 100%; /* 1 card per row on small screens */
+    }
+}

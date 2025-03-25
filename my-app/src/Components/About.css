@@ -1,0 +1,142 @@
+.about-us-container {
+    display: flex;
+    flex-direction: row; /* Change to row for side-by-side layout */
+    align-items: center; /* Center items vertically */
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 4rem auto; /* Increase margin to create more space above and below */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.about-us-content {
+    flex: 1; /* Allow the text to take available space */
+    max-width: 600px; /* Limit the width of the text */
+    text-align: left;
+    margin-right: 2rem; /* Add some space between text and image */
+}
+
+.about-us-subtitle {
+    font-size: 1rem;
+    color: #ff0000; /* Red color */
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.about-us-title {
+    font-size: 2.5rem; /* Large title size */
+    font-weight: bold;
+    color: #000000; /* Black color */
+    margin-bottom: 1rem;
+    font-family: 'Cabin Sketch', cursive; /* Custom font */
+}
+
+.highlight {
+    color: #ff0000; /* Highlight color */
+    font-family: 'Cabin Sketch', cursive; /* Custom font */
+}
+
+.about-us-description {
+    color: #000000; /* Black color */
+    margin-bottom: 1.5rem;
+}
+
+.about-us-button {
+    background-color: #2563EB; /* Blue color */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.about-us-image-container {
+    flex: 1; /* Allow the image to take available space */
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-top: 2rem; /* Add margin for spacing on smaller screens */
+}
+
+.about-us-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.about-us-cards {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    margin-top: 2rem; /* Space above the card section */
+}
+
+.card {
+    background-color: #fff; /* Card background color */
+    border: 1px solid #0b0b0b; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding inside the card */
+    text-align: center; /* Center text */
+    margin: 1rem; /* Margin around the card */
+    flex: 0 0 250px; /* Set flex-basis to 250px and prevent growing/shrinking */
+    width: 250px; /* Set a fixed width for the card */
+    height: 350px; /* Set a fixed height for the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space out children */
+}
+
+.card-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for the image */
+}
+
+.card-title {
+    font-size: 1rem; /* Title font size */
+    margin: 0.5rem 0; /* Margin above and below the title */
+    
+}
+
+.card-description {
+    font-size: 1rem; /* Description font size */
+    color: #000000; /* Description text color */
+    margin: 0.5rem 0; /* Margin above and below the description */
+    
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .about-us-content {
+        max-width: 100%; /* Allow content to take full width */
+        margin-right: 0; /* Remove right margin */
+        text-align: center; /* Center text for better appearance */
+    }
+
+    .about-us-image-container {
+        margin-top: 1rem; /* Adjust margin for spacing */
+        width: 100%; /* Ensure image container takes full width */
+    }
+
+    .about-us-image {
+        max-width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about-us-cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        max-width: 90%; /* Allow cards to take more width on small screens */
+        margin: 1rem 0; /* Adjust margin for vertical spacing */
+        height: 350px; /* Maintain the same height as on larger screens */
+        min-height: 350px; /* Ensure minimum height is the same as fixed height */
+    }
+}

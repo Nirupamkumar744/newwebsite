@@ -1,0 +1,83 @@
+/* src/Navbar.css */
+.navbar {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Make the navbar fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: rgb(5, 4, 0);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links:hover {
+  color: rgb(248, 227, 2);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: black; /* Hamburger lines color */
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+      flex-direction: column;
+      position: absolute;
+      top: 99px;
+      left: 10px;
+      right: 10px;
+      background-color: rgb(252, 254, 255); /* Background color for mobile view */
+      display: none; /* Hide by default */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+  }
+
+  .nav-menu.active {
+      display: flex; /* Show when active */
+  }
+
+  .nav-links {
+      padding: 1rem; /* Add padding for better touch targets */
+      border-radius: 5px; /* Optional: rounded corners */
+  }
+
+  .hamburger {
+      display: flex; /* Show hamburger in mobile view */
+  }
+}
