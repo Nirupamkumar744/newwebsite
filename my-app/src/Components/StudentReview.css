@@ -30,8 +30,8 @@
     border-radius: 50%; /* Circular images */
     margin-bottom: 0.5rem; /* Space below image */
 }
-.para{
 
+.para {
     font-family: 'Shadows Into Light', cursive;
     font-size: larger;
 }
@@ -46,12 +46,13 @@
 }
 
 .star.filled {
-    color: #ffcc00 ; /* Color for filled stars */
+    color: #ffcc00; /* Color for filled stars */
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
     .review-card {
-        flex: 0 1 100%; /* 1 card per row on small screens */
+        flex: 0 1 calc(90% - 1rem); /* Increase width to 90% for mobile */
+        margin: 0.5rem auto; /* Center cards with auto margin */
     }
 }

@@ -55,7 +55,7 @@
     }
 
     .service-card {
-        max-width: 100%; /* Allow cards to take full width */
+        max-width: 90%; /* Increase width to 90% for mobile */
         margin: 0.5rem 0; /* Space between stacked cards */
     }
 }
