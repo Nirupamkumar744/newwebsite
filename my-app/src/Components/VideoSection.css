@@ -75,15 +75,15 @@
 /* Additional Styles for Cards */
 .card {
     width: 100%; /* Ensure cards take full width */
-    max-width: 100%; /* Ensure cards do not exceed container width */
+    max-width: 700px; /* Set a maximum width for cards on larger screens */
     margin: 0 auto; /* Center cards */
 }
 
 /* Responsive Styles for Cards */
 @media (max-width: 768px) {
     .card {
-        width: 100%; /* Ensure cards take full width on mobile */
-        max-width: 100%; /* Ensure cards do not exceed container width */
+        width: 600px; /* Set a fixed width for cards on mobile */
+        max-width: 600px; /* Ensure cards do not exceed this width */
         height: auto; /* Allow height to adjust based on content */
     }
 }
