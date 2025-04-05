@@ -80,7 +80,7 @@
     padding: 1rem;
     text-align: center;
     margin: 1rem;
-    flex: 0 0 300px; /* Badha diya width */
+    flex: 0 0 250px; /* Badha diya width */
     width: 300px; /* Badha diya width */
     height: 350px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
