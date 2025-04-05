@@ -1,7 +1,7 @@
 /* FAQ.css */
 .faq-container {
   width: 90%; /* Slightly wider for impact */
-  max-width: 800px; /* Increased max-width for larger screens */
+  max-width: 1600px; /* Increased max-width for larger screens */
   margin: 120px auto; /* More top margin for dramatic spacing */
   font-family: 'Orbitron', sans-serif; /* Futuristic font */
   padding: 30px; /* More internal padding */

@@ -28,13 +28,13 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Connect With Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61564590580574" className="social-icon" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/stockarchery" className="social-icon" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/stock.archery/?hl=en" className="social-icon" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
             <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noopener noreferrer">

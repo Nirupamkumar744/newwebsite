@@ -3,7 +3,7 @@
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     padding: 2rem; /* Add padding around the section */
-    max-width: 1500px; /* Set a maximum width for the section */
+    max-width: 1600px; /* Set a maximum width for the section */
     margin: 0 auto; /* Center the section */
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }

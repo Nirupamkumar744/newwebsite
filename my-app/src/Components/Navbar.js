@@ -15,10 +15,16 @@ const Navbar = ({ servicesRef, testimonialsRef }) => {
     }
   };
 
+  // Cloudinary URL with size and quality optimization
+  const logoUrl = 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152409/logo1_rzt9qj.png';
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <h1 className="navbar-logo">STOCK ARCHERY</h1>
+        <Link to="/" className="navbar-logo-link" onClick={toggleMenu}>
+          <img src={logoUrl} alt="Stock Archery Logo" className="navbar-logo-img" />
+          <h1 className="navbar-logo">STOCK ARCHERY</h1>
+        </Link>
         <div className="hamburger" onClick={toggleMenu}>
           <div className={`line ${isOpen ? 'open' : ''}`}></div>
           <div className={`line ${isOpen ? 'open' : ''}`}></div>

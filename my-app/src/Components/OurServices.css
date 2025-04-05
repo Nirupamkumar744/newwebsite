@@ -1,7 +1,7 @@
 /* src/OurServices.css */
 .services-section {
     padding: 2rem; /* Add padding around the section */
-    max-width: 1400px; /* Set a maximum width for the section */
+    max-width: 1600px; /* Set a maximum width for the section */
     margin: 0 auto; /* Center the section */
     text-align: center; /* Center the heading */
 }
@@ -26,7 +26,7 @@
     border: 1px solid #000000; /* Optional: border around cards */
     border-radius: 8px; /* Optional: rounded corners */
     text-align: left; /* Align text to the left */
-    max-width: 250px; /* Default max-width for larger screens */
+    max-width: 300px; /* Width for large screens */
     box-sizing: border-box; /* Include padding and border in width */
 }
 
@@ -56,9 +56,17 @@
     }
 
     .service-card {
-        width: 95%; /* Badha diya width small screen pe (previously 100%) */
+        width: 250px; /* Full width on mobile */
         max-width: none; /* Remove max-width constraint */
         margin: 1rem 0; /* Vertical spacing only */
-        padding: 1.5rem; /* Padding wahi rakha */
+        padding: 2rem; /* Badha diya padding mobile pe (previously 1.5rem) */
+    }
+
+    .service-title {
+        font-size: 1.5rem; /* Badha diya title size mobile pe */
+    }
+
+    .service-description {
+        font-size: 1.2rem; /* Badha diya description size mobile pe */
     }
 }

@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%; /* Full width of parent */
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 1rem 0;
     overflow-x: auto;

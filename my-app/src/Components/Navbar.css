@@ -19,6 +19,35 @@
   margin: 0 auto;
 }
 
+/* Logo and Title Container */
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Image Styles */
+.navbar-logo-img {
+  width: 50px; /* Default size */
+  height: 50px;
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover; /* Ensures the image fits nicely */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-logo-img:hover {
+  transform: scale(1.1); /* Slight pop on hover */
+}
+
+/* Original STOCK ARCHERY Text Styles */
+.navbar-logo {
+  margin: 0; /* Remove default h1 margin */
+  font-size: 1.5rem; /* Matches typical h1 size */
+  font-weight: bold; /* Matches original intent */
+  color: rgb(5, 4, 0); /* Original black */
+}
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -81,6 +110,15 @@
     padding: 0.8rem; /* Slightly compact */
   }
 
+  .navbar-logo-img {
+    width: 40px; /* Smaller for tablets */
+    height: 40px;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem; /* Slightly smaller */
+  }
+
   .nav-menu {
     flex-direction: column;
     position: fixed; /* Full-screen */
@@ -110,7 +148,7 @@
   }
 
   .nav-links {
-    color: rgb(5, 4, 0); /* Original black */
+    color: rgb(5, 4, 0); /* Fixed typo */
     font-size: 1.6rem; /* Larger for impact */
     padding: 1rem 3rem; /* Wide touch area */
     border-radius: 10px;
@@ -145,6 +183,15 @@
 
 /* Extra Small Screens (below 480px) */
 @media (max-width: 480px) {
+  .navbar-logo-img {
+    width: 35px; /* Even smaller for small screens */
+    height: 35px;
+  }
+
+  .navbar-logo {
+    font-size: 1rem; /* Even smaller */
+  }
+
   .nav-links {
     font-size: 1.3rem; /* Slightly smaller */
     padding: 0.8rem 2rem;
