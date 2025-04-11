@@ -56,7 +56,7 @@
     }
 
     .service-card {
-        width: 250px; /* Full width on mobile */
+        width: 99%; /* Full width on mobile */
         max-width: none; /* Remove max-width constraint */
         margin: 1rem 0; /* Vertical spacing only */
         padding: 2rem; /* Badha diya padding mobile pe (previously 1.5rem) */

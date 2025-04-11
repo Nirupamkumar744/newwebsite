@@ -14,7 +14,8 @@ const blogData = [
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725792479/316945-bajaj-housing-finance-ipo_tx03z5.avif',
         title: 'Bajaj Housing Finance IPO',
         link: '/blog1',
-    },
+    }
+   
     
 ];
 
