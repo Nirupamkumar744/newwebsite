@@ -1,6 +1,6 @@
-// src/Components/Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaHome, FaInfoCircle, FaBook, FaEnvelope, FaQuestionCircle } from 'react-icons/fa'; // Import icons
 import './Navbar.css'; // Import the CSS file for styling
 
 const Navbar = ({ servicesRef, testimonialsRef }) => {
@@ -32,19 +32,29 @@ const Navbar = ({ servicesRef, testimonialsRef }) => {
         </div>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={toggleMenu}>Home</Link>
+            <Link to="/" className="nav-links" onClick={toggleMenu}>
+              <FaHome /> Home
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links" onClick={toggleMenu}>About</Link>
+            <Link to="/about" className="nav-links" onClick={toggleMenu}>
+              <FaInfoCircle /> About
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className="nav-links" onClick={toggleMenu}>Blog</Link>
+            <Link to="/blog" className="nav-links" onClick={toggleMenu}>
+              <FaBook /> Blog
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contactUs" className="nav-links" onClick={toggleMenu}>Contact</Link>
+            <Link to="/contactUs" className="nav-links" onClick={toggleMenu}>
+              <FaEnvelope /> Contact
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/faq" className="nav-links" onClick={toggleMenu}>FAQ</Link>
+            <Link to="/faq" className="nav-links" onClick={toggleMenu}>
+              <FaQuestionCircle /> FAQ
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 /* src/components/AboutUs.css */
 
-/* Original styles remain unchanged until media query */
+/* ---------- Main Layout ---------- */
 .about-us-container {
     display: flex;
     flex-direction: row;
@@ -66,6 +66,7 @@
     border-radius: 10px;
 }
 
+/* ---------- Cards Section ---------- */
 .about-us-cards {
     display: flex;
     justify-content: space-between;
@@ -73,22 +74,35 @@
     margin-top: 2rem;
 }
 
+/* Card Styles */
 .card {
     background-color: #fff;
     border: 1px solid #0b0b0b;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    margin: 1rem;
-    flex: 0 0 250px; /* Badha diya width */
-    width: 300px; /* Badha diya width */
-    height: 350px;
+    margin: 0.5rem;
+    flex: 0 0 250px;
+    width: 300px;
+    height: 380px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
+
+    /* Prevent movement on interaction */
+    transition: none !important;
+    transform: none !important;
 }
 
+.card:hover,
+.card:focus,
+.card:active {
+    transform: none !important; /* Prevent any movement */
+}
+
+/* Card Content */
 .card-image {
     width: 100%;
     height: auto;
@@ -106,12 +120,12 @@
     margin: 0.5rem 0;
 }
 
-/* Responsive styles with space above and below cards on small screens */
+/* ---------- Responsive Styling for Small Screens ---------- */
 @media (max-width: 768px) {
     .about-us-container {
         flex-direction: column;
         align-items: center;
-        padding: 2rem 1rem; /* Reduce side padding, keep top/bottom */
+        padding: 2rem 1rem;
     }
 
     .about-us-content {
@@ -134,13 +148,21 @@
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
-        padding: 20px 0; /* Add space above and below card section */
+        padding: 20px 0;
     }
 
     .card {
+        width: 90%;
         max-width: 90%;
-        margin: 3.5rem 0; /* Increased vertical margin for more space */
-        height: 350px;
+        height: 380px;
         min-height: 350px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       
+        /* Prevent card from shifting on click */
+        transform: none !important;
+        transition: none !important;
     }
 }
+
+

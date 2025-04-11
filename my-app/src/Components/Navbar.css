@@ -1,53 +1,75 @@
-/* src/Navbar.css */
 .navbar {
-  background-color: white;
-  color: black;
-  padding: 1rem;
+  background-color: white; /* Original white */
+  color: rgb(5, 4, 0); /* Original black */
+  padding: 0.5rem 1rem; /* Compact padding */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-}
-
-.navbar-container {
+  height: 50px; /* Fixed reduced height */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1500px;
-  margin: 0 auto;
 }
 
-/* Logo and Title Container */
+.navbar-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
 .navbar-logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 10px; /* Space between logo and text */
+  gap: 8px;
 }
 
-/* Logo Image Styles */
 .navbar-logo-img {
-  width: 50px; /* Default size */
-  height: 50px;
-  border-radius: 50%; /* Makes it round */
-  object-fit: cover; /* Ensures the image fits nicely */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  width: 32px; /* Smaller logo */
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo-img:hover {
-  transform: scale(1.1); /* Slight pop on hover */
+  transform: scale(1.1);
 }
 
-/* Original STOCK ARCHERY Text Styles */
 .navbar-logo {
-  margin: 0; /* Remove default h1 margin */
-  font-size: 1.5rem; /* Matches typical h1 size */
-  font-weight: bold; /* Matches original intent */
+  margin: 0;
+  font-size: 1.3rem; /* Adjusted for compact navbar */
+  font-weight: bold;
   color: rgb(5, 4, 0); /* Original black */
+  font-family: 'Inter', sans-serif;
 }
 
+/* Close Button Styles */
+.close-button {
+  display: none; /* Hidden by default, shown in mobile menu */
+  font-size: 1.5rem;
+  color: rgb(248, 227, 2); /* Yellow from original scheme */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(248, 227, 2, 0.2); /* Subtle yellow hover */
+  color: rgb(5, 4, 0); /* Black on hover */
+}
+
+/* Navigation Menu */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -61,38 +83,49 @@
 .nav-links {
   text-decoration: none;
   color: rgb(5, 4, 0); /* Original black */
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif; /* Modern font */
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; /* Original font */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links:hover {
-  color: rgb(248, 227, 2); /* Original yellow */
-  transform: scale(1.05); /* Slight pop */
+  color: rgb(0, 0, 0); /* Original yellow */
+  transform: scale(1.05);
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
   z-index: 1001;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger:hover {
+  background: rgba(248, 227, 2, 0.2); /* Yellow tint */
+  transform: scale(1.1);
 }
 
 .line {
-  width: 30px; /* Larger for boldness */
-  height: 4px; /* Thicker */
-  background-color: black; /* Original black */
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: all 0.4s ease; /* Smooth transition */
+  width: 24px;
+  height: 3px;
+  background-color: rgb(5, 4, 0); /* Original black */
+  margin: 3px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 /* Hamburger Animation */
 .hamburger.active .line:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-  background-color: rgb(248, 227, 2); /* Yellow when active */
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: rgb(248, 227, 2); /* Original yellow */
 }
 
 .hamburger.active .line:nth-child(2) {
@@ -100,109 +133,248 @@
 }
 
 .hamburger.active .line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-  background-color: rgb(248, 227, 2); /* Yellow when active */
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: rgb(0, 0, 0); /* Original yellow */
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Mobile (below 768px) */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.8rem; /* Slightly compact */
-  }
-
-  .navbar-logo-img {
-    width: 40px; /* Smaller for tablets */
-    height: 40px;
-  }
-
-  .navbar-logo {
-    font-size: 1.2rem; /* Slightly smaller */
+    padding: 0.5rem;
+    height: 50px; /* Consistent reduced height */
   }
 
   .nav-menu {
     flex-direction: column;
-    position: fixed; /* Full-screen */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+    position: fixed;
+    top: 50px; /* Below navbar */
+    left: 0; /* Slide from left */
+    width: 80%; /* Wider to match Dovetail style */
+    height: calc(100% - 50px); /* Adjust for navbar height */
+    background: white; /* White background */
     display: none;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Strong shadow */
-    border-bottom: 3px solid rgb(248, 227, 2); /* Yellow border */
-    transition: opacity 0.3s ease;
-    opacity: 0; /* Start hidden */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateX(-100%); /* Start off-screen left */
+    opacity: 0;
   }
 
   .nav-menu.active {
     display: flex;
+    transform: translateX(0); /* Slide in */
     opacity: 1;
-    animation: slideDown 0.4s ease forwards; /* Slide-down effect */
+    animation: slideInLeft 0.4s ease forwards;
   }
 
   .nav-item {
-    margin: 1.5rem 0; /* Vertical spacing */
+    width: 100%;
+    margin: 0.5rem 0;
   }
 
   .nav-links {
-    color: rgb(5, 4, 0); /* Fixed typo */
-    font-size: 1.6rem; /* Larger for impact */
-    padding: 1rem 3rem; /* Wide touch area */
-    border-radius: 10px;
-    background: rgba(248, 227, 2, 0.1); /* Subtle yellow overlay */
+    color: rgb(5, 4, 0);
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    display: block;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 1px solid #e0e0e0; /* Subtle divider */
   }
 
-  .nav-links:hover {
-    color: rgb(248, 227, 2); /* Yellow */
-    background: rgba(248, 227, 2, 0.3); /* Stronger yellow */
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(248, 227, 2, 0.5); /* Yellow glow */
+  .nav-links:hover,
+  .nav-links:active {
+    color: rgb(248, 227, 2);
+    background: rgba(248, 227, 2, 0.1);
+    transform: scale(1.02); /* Subtle scale */
+  }
+
+  /* Sub-menu styling inspired by Dovetail */
+  .nav-item.has-submenu .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-item.has-submenu .nav-links::after {
+    content: '›'; /* Right arrow for sub-menus */
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-item.has-submenu.active .nav-links::after {
+    transform: rotate(90deg);
+  }
+
+  .nav-submenu {
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .nav-item.has-submenu.active .nav-submenu {
+    display: block;
+  }
+
+  .nav-submenu .nav-links {
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    color: #666; /* Gray for sub-items */
+  }
+
+  .nav-submenu .nav-links:hover {
+    color: rgb(248, 227, 2);
+    background: rgba(248, 227, 2, 0.1);
+  }
+
+  .nav-submenu .nav-links.active {
+    background: rgba(248, 227, 2, 0.2);
+    font-weight: 600;
   }
 
   .hamburger {
-    display: flex; /* Show on mobile */
+    display: flex;
+  }
+
+  .close-button {
+    display: block; /* Show close button in mobile menu */
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 
-/* Slide-down Animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+    height: 50px;
   }
-  to {
+
+  .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 80%;
+    height: calc(100% - 50px);
+    background: white;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    transform: translateX(0);
     opacity: 1;
-    transform: translateY(0);
+    animation: slideInLeft 0.4s ease forwards;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-links {
+    color: rgb(5, 4, 0);
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .nav-links:hover,
+  .nav-links:active {
+    color: rgb(248, 227, 2);
+    background: rgba(248, 227, 2, 0.1);
+    transform: scale(1.02);
+  }
+
+  /* Icon styling */
+  .nav-links svg {
+    width: 1.2rem; /* Consistent icon size */
+    height: 1.2rem;
+    color: rgb(5, 4, 0); /* Black by default */
+    transition: color 0.3s ease;
+  }
+
+  .nav-links:hover svg,
+  .nav-links:active svg {
+    color: rgb(0, 0, 0); /* Yellow on hover/active */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .close-button {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }
 
 /* Extra Small Screens (below 480px) */
 @media (max-width: 480px) {
+  .navbar {
+    padding: 0.4rem;
+    height: 40px;
+  }
+
   .navbar-logo-img {
-    width: 35px; /* Even smaller for small screens */
-    height: 35px;
+    width: 28px;
+    height: 28px;
   }
 
   .navbar-logo {
-    font-size: 1rem; /* Even smaller */
+    font-size: 1.1rem;
+  }
+
+  .nav-menu {
+    top: 40px;
+    width: 85%;
+    height: calc(100% - 40px);
+    padding: 0.8rem;
   }
 
   .nav-links {
-    font-size: 1.3rem; /* Slightly smaller */
-    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    padding: 0.6rem 0.8rem;
   }
 
   .hamburger {
-    padding: 3px;
+    width: 36px;
+    height: 36px;
   }
 
   .line {
-    width: 25px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
+    margin: 2.5px 0;
+  }
+}
+
+/* Animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
