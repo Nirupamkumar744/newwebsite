@@ -31,10 +31,10 @@
     flex: 1; /* Take up available space */
     display: flex;
     justify-content: center; /* Center video horizontally */
-    height: 300px; /* Set a fixed height for the video container */
+    height: 350px; /* Set a fixed height for the video container */
     max-width: 700px; /* Set a maximum width for the video container */
     width: 100%; /* Make the video container responsive */
-    border-radius: 10px;
+    
 }
 
 .video {

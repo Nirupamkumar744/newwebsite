@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 50px; /* Fixed reduced height */
+  height: 80px; /* Fixed reduced height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,8 +32,8 @@
 }
 
 .navbar-logo-img {
-  width: 32px; /* Smaller logo */
-  height: 32px;
+  width: 52px; /* Smaller logo */
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -45,12 +45,21 @@
 
 .navbar-logo {
   margin: 0;
-  font-size: 1.3rem; /* Adjusted for compact navbar */
-  font-weight: bold;
-  color: rgb(5, 4, 0); /* Original black */
-  font-family: 'Inter', sans-serif;
+  font-size: 2.3rem; /* Adjusted for compact navbar */
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.stock-text {
+  color: #febb12; /* Dark Yellow */
+  font-weight: bold;
+}
+
+.archery-text {
+  color: rgb(5, 4, 0); /* Black */
+  font-weight: bold;
+}
 /* Close Button Styles */
 .close-button {
   display: none; /* Hidden by default, shown in mobile menu */

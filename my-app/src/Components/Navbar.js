@@ -23,7 +23,9 @@ const Navbar = ({ servicesRef, testimonialsRef }) => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo-link" onClick={toggleMenu}>
           <img src={logoUrl} alt="Stock Archery Logo" className="navbar-logo-img" />
-          <h1 className="navbar-logo">STOCK ARCHERY</h1>
+          <h1 className="navbar-logo">
+  <span className="stock-text">STOCK</span> <span className="archery-text">ARCHERY</span>
+</h1>
         </Link>
         <div className="hamburger" onClick={toggleMenu}>
           <div className={`line ${isOpen ? 'open' : ''}`}></div>
