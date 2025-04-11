@@ -1,7 +1,7 @@
 /* src/OurServices.css */
 .services-section {
     padding: 2rem; /* Add padding around the section */
-    max-width: 1600px; /* Set a maximum width for the section */
+    
     margin: 0 auto; /* Center the section */
     text-align: center; /* Center the heading */
 }
@@ -15,18 +15,19 @@
 
 .services-container {
     display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
     flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    padding: 0; /* Remove padding to prevent overflow */
+    margin: 0; /* Remove margin to prevent overflow */
 }
 
 .service-card {
-    flex: 1; /* Allow cards to take up equal space */
+    width: 300px; /* Set a fixed width for cards */
     margin: 1rem; /* Space around each card */
     padding: 1rem; /* Padding inside each card */
     border: 1px solid #000000; /* Optional: border around cards */
     border-radius: 8px; /* Optional: rounded corners */
     text-align: left; /* Align text to the left */
-    max-width: 300px; /* Width for large screens */
     box-sizing: border-box; /* Include padding and border in width */
 }
 
@@ -50,23 +51,28 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .services-section {
+        padding: 1rem; /* Reduce padding for small screens */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
     .services-container {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
-        align-items: center; /* Center cards horizontally */
+        flex-direction: column; /* Stack cards */
+        align-items: center; /* Center them */
     }
 
     .service-card {
-        width: 99%; /* Full width on mobile */
-        max-width: none; /* Remove max-width constraint */
-        margin: 1rem 0; /* Vertical spacing only */
-        padding: 2rem; /* Badha diya padding mobile pe (previously 1.5rem) */
+        width: 100vw; /* Use viewport width for better fit */
+        max-width: 260px; /* Limit to original card width */
+        margin: 1rem auto; /* Auto margin to center card */
+        box-sizing: border-box;
     }
 
     .service-title {
-        font-size: 1.5rem; /* Badha diya title size mobile pe */
+        font-size: 1.5rem;
     }
 
     .service-description {
-        font-size: 1.2rem; /* Badha diya description size mobile pe */
+        font-size: 1.2rem;
     }
 }
