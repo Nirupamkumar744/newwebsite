@@ -12,7 +12,7 @@ const VideoSection = () => {
         </p>
       </div>
       <div className="video-container">
-        <video className="video" muted autoPlay loop playsInline>
+        <video className="video" muted autoPlay loop playsInline controls>
           <source src="https://res.cloudinary.com/dyrn2eg1j/video/upload/v1741760954/IMG_5261_ewbvad.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
