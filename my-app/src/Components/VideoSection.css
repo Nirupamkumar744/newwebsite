@@ -43,45 +43,46 @@
     object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .video-section {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items horizontally */
-        padding: 1rem; /* Reduce padding on mobile */
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
     }
 
     .text-container {
-        padding-right: 0; /* Remove right padding */
-        padding-bottom: 1rem; /* Add bottom padding for spacing */
-        min-width: auto; /* Remove minimum width */
-        text-align: center; /* Center text for better appearance */
+        padding-right: 0;
+        padding-bottom: 1rem;
+        min-width: auto;
+        text-align: center;
     }
 
     .video-container {
-        height: 400px; /* Increased height for video on mobile */
-        max-width: 100%; /* Ensure video container takes full width */
-        width: 100%; /* Ensure video container takes full width */
-        margin: 0; /* Remove margins around video */
+        width: 100%;
+        aspect-ratio: 16 / 9; /* Maintain a rectangle */
+        max-width: 100%;
+        height: auto; /* Let height adjust based on aspect ratio */
+        margin: 0;
     }
 
     .video {
-        object-fit: cover; /* Ensure video fills container */
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Show full video without cropping */
     }
 
     .section-heading {
-        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        font-size: 1.5rem;
     }
 
     .section-text {
-        font-size: 0.9rem; /* Adjust text size for smaller screens */
+        font-size: 0.9rem;
     }
 
-    /* Card adjustments for mobile */
     .card {
-        width: 100%; /* Ensure cards take full width */
-        max-width: 100%; /* Make cards full-width on mobile */
-        margin: 0; /* Remove margin around cards */
-        padding: 1rem; /* Add some padding around cards */
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
     }
 }
