@@ -25,25 +25,25 @@ const AboutUs = () => {
 
             {/* New Card Section - Positioned Below About Us Container */}
             <div className="about-us-cards">
-                <div className="card">
+                <div className="carde">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742800346/Add_a_subheading_2_e8hsr1.png" alt="Expert Training" className="card-image" />
-                    <h3 className="card-title">Expert Training</h3>
-                    <p className="card-description">Learn from industry experts with years of experience.</p>
+                    <h3 className="carde-title">Expert Training</h3>
+                    <p className="carde-description">Learn from industry experts with years of experience.</p>
                 </div>
-                <div className="card">
+                <div className="carde">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742800345/Add_a_subheading_3_l8uay9.png" alt="Live Market Sessions" className="card-image" />
-                    <h3 className="card-title">Live Market Sessions</h3>
-                    <p className="card-description">Participate in live trading sessions to gain real-time experience.</p>
+                    <h3 className="carde-title">Live Market Sessions</h3>
+                    <p className="carde-description">Participate in live trading sessions to gain real-time experience.</p>
                 </div>
-                <div className="card">
+                <div className="carde">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742800345/Add_a_subheading_5_kvtkjb.png" alt="Personalized Mentorship" className="card-image" />
-                    <h3 className="card-title">Personalized Mentorship</h3>
-                    <p className="card-description">Get one-on-one mentorship tailored to your trading goals.</p>
+                    <h3 className="carde-title">Personalized Mentorship</h3>
+                    <p className="carde-description">Get one-on-one mentorship tailored to your trading goals.</p>
                 </div>
-                <div className="card">
+                <div className="carde">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742800345/Add_a_subheading_4_rjr3ll.png" alt="Risk Management" className="card-image" />
-                    <h3 className="card-title">Risk Management</h3>
-                    <p className="card-description">Learn effective strategies to manage risks in trading.</p>
+                    <h3 className="carde-title">Risk Management</h3>
+                    <p className="carde-description">Learn effective strategies to manage risks in trading.</p>
                 </div>
             </div>
         </>
