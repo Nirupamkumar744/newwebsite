@@ -14,6 +14,12 @@ const blogData = [
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725792479/316945-bajaj-housing-finance-ipo_tx03z5.avif',
         title: 'Bajaj Housing Finance IPO',
         link: '/blog1',
+    },
+    {
+        id: 4,
+        image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1745045207/Flux_Dev_A_dramatic_sketchstyle_illustration_of_a_trade_war_be_2_1_hcd6hw.jpg',
+        title: 'USA Vs CHINA TRIFF WAR',
+        link: '/blog3',
     }
    
     
