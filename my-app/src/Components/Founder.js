@@ -6,7 +6,7 @@ const Founder = () => {
   return (
     <div className="founder-section">
       <div className="founder-image">
-        <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1742793764/STOCK_ARCHERY_10_eojbx1.png" alt="Founder" /> {/* Replace with your image URL */}
+        <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1745225949/IMG_6938_gmocsb.png" alt="Founder" /> {/* Replace with your image URL */}
       </div>
       <div className="founder-content">
         <h2 className="founder-heading">Our Founder</h2>
