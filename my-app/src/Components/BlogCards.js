@@ -20,8 +20,13 @@ const blogData = [
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1745045207/Flux_Dev_A_dramatic_sketchstyle_illustration_of_a_trade_war_be_2_1_hcd6hw.jpg',
         title: 'USA Vs CHINA TRIFF WAR',
         link: '/blog3',
+    },
+    {
+        id: 5,
+        image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1745216657/image_fh7ljf.webp',
+        title: 'India Renewable Energy Surge',
+        link: '/blog4',
     }
-   
     
 ];
 
