@@ -54,11 +54,19 @@
 .stock-text {
   color: #febb12; /* Dark Yellow */
   font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
 }
 
 .archery-text {
   color: rgb(5, 4, 0); /* Black */
   font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
 }
 /* Close Button Styles */
 .close-button {
