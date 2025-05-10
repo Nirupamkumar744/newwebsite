@@ -26,6 +26,12 @@ const blogData = [
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1745216657/image_fh7ljf.webp',
         title: 'India Renewable Energy Surge',
         link: '/blog4',
+    },
+    {
+        id: 5,
+        image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1746867309/Flux_Dev_Create_a_highresolution_digital_illustration_depictin_0_l2a6g1.jpg',
+        title: 'India Vs Pakistan War 2025',
+        link: '/blog5',
     }
     
 ];
