@@ -2,7 +2,13 @@ import React from 'react';
 import './BlogCards.css'; // Import the CSS file for styling
 
 const blogData = [
-     {
+    {
+        id: 7,
+        image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1747645011/maxresdefault_n3d1so.jpg',
+        title: 'India Vs Us Tariff Deal',
+        link: '/blog7',
+    },
+    {
         id: 6,
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1747382676/USA-TRUMP-TARIFFS-INDIA-0_1747295397691_1747295428411_dxbtug.jpg',
         title: 'India Vs Us Tariff Deal',

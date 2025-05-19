@@ -18,7 +18,7 @@ import Blog3 from './Components/blog3';
 import Blog4 from './Components/blog4';
 import Blog5 from './Components/blog5';
 import Blog6 from './Components/blog6';
-
+import Blog7 from './Components/blog7';
 function App() {
   const servicesRef = useRef(null);
   const testimonialsRef = useRef(null);
@@ -50,6 +50,7 @@ function App() {
           <Route path="/blog4" element={< Blog4/>} />
           <Route path="/blog5" element={< Blog5/>} />
           <Route path="/blog6" element={< Blog6/>} />
+          <Route path="/blog7" element={< Blog7/>} />
         </Routes>
 
 
