@@ -5,7 +5,7 @@ const blogData = [
     {
         id: 7,
         image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1747645011/maxresdefault_n3d1so.jpg',
-        title: 'India Vs Us Tariff Deal',
+        title: 'RBI Fines Yes Bank ₹29.6 Lakh',
         link: '/blog7',
     },
     {
