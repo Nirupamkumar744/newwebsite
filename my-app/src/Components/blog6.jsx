@@ -51,16 +51,6 @@ const BlogMarketVolatilityTradeDeal = () => {
         paddingBottom: '6px'
     };
 
-    const subHeadingStyle = {
-        fontSize: '20px',
-        fontWeight: 'bold',
-        color: '#007BFF',
-        marginBottom: '10px',
-        textAlign: 'left',
-        borderBottom: '2px solid #007BFF',
-        display: 'inline-block',
-        paddingBottom: '4px'
-    };
 
     const paragraphStyle = {
         fontSize: '16px',
